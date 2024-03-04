@@ -20,4 +20,19 @@ class HelpMeTest extends TestCase
         // Test for odd number
         $this->assertFalse(HelpMe::isEven(7));
     }
+
+    public function testIsJson()
+    {
+
+        // Test is Json
+        $json = '{"name":"abc", "email": "abc@gmail.com"}';
+        $this->assertTrue(HelpMe::isJson($json));
+
+        // Test not Json
+        $notJson = '{name:abc, email: abc@gmail.com}';
+        $this->assertFalse(HelpMe::isJson($notJson));
+
+        // Test empty string
+        $this->assertFalse(HelpMe::isJson(""));
+    }
 }
