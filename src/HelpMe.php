@@ -13,4 +13,13 @@ class HelpMe
     {
         return $number % 2 === 0;
     }
+
+    public static function isJson(string $data): bool
+    {
+        if (!empty($data)) {
+            return is_string($data) &&
+                is_array(json_decode($data, true)) ? true : false;
+        }
+        return false;
+    }
 }

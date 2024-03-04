@@ -29,6 +29,14 @@ use iAmLazy\HelpMe;
 HelpMe::isEven(8)
 ```
 
+### isJson
+```php
+use iAmLazy\HelpMe;
+
+HelpMe::isJson('{"name":"abc", "email": "abc@gmail.com"}')
+```
+
+
 ## Contribution
 If you have suggestions or would like to contribute to the library, please open an issue or create a pull request on GitHub.
 
