@@ -36,6 +36,13 @@ use iAmLazy\HelpMe;
 HelpMe::isJson('{"name":"abc", "email": "abc@gmail.com"}')
 ```
 
+### flatten
+```php
+use iAmLazy\HelpMe;
+
+HelpMe::flatten([[1, 2], [2, 3]])
+```
+
 
 ## Contribution
 If you have suggestions or would like to contribute to the library, please open an issue or create a pull request on GitHub.
