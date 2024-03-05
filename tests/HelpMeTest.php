@@ -35,4 +35,25 @@ class HelpMeTest extends TestCase
         // Test empty string
         $this->assertFalse(HelpMe::isJson(""));
     }
+
+    public function testFlatten()
+    {
+        $originalArray = [
+            'foo',
+            ['nobody', 'expects', ['another', 'level']],
+            42,
+            ['deep', 'down', ['the', 'rabbit', 'hole']]
+        ];
+
+        $expectedResult = [
+            'foo',
+            'nobody', 'expects', 'another', 'level',
+            42,
+            'deep', 'down', 'the', 'rabbit', 'hole'
+        ];
+
+        $flattenedArray = HelpMe::flatten($originalArray);
+
+        $this->assertEquals($expectedResult, $flattenedArray);
+    }
 }
