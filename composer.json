@@ -1,12 +1,19 @@
 {
     "name": "minhkhoablieu/iamlazy",
-    "description": "This is a package for good but lazy programmers.",
+    "description": "Package provides convenient support functions such as isOdd, isEven and more.",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
             "iAmLazy\\": "src/"
         }
+    },
+    "keywords": [
+        "helper",
+        "lazy"
+    ],
+    "require": {
+        "php": "^5.3"
     },
     "authors": [
         {
