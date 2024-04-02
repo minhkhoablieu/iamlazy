@@ -56,4 +56,18 @@ class HelpMeTest extends TestCase
 
         $this->assertEquals($expectedResult, $flattenedArray);
     }
+
+    public function testIsPrime()
+    {
+        // Test is prime
+        $this->assertTrue(HelpMe::isPrime(2));
+        $this->assertTrue(HelpMe::isPrime(7));
+        $this->assertTrue(HelpMe::isPrime(11));
+
+        // Test not prime
+        $this->assertFalse(HelpMe::isPrime(4));
+        $this->assertFalse(HelpMe::isPrime(6));
+        $this->assertFalse(HelpMe::isPrime(8));
+        $this->assertFalse(HelpMe::isPrime(0));
+    }
 }
